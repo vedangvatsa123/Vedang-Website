@@ -17,13 +17,13 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-4xl items-center">
+      <div className="container flex h-16 max-w-4xl items-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Code2 className="h-6 w-6" />
             <span className="font-bold font-headline">veda.ng</span>
           </Link>
-          <nav className="hidden md:flex items-center gap-6 text-sm">
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
@@ -37,11 +37,6 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-        </div>
-        <div className="flex flex-1 items-center justify-end">
-          <Button asChild variant="outline" size="sm">
-            <Link href="/create">New Post</Link>
-          </Button>
         </div>
       </div>
     </header>

@@ -6,13 +6,13 @@ export default function Home() {
   const posts = getAllPosts();
 
   return (
-    <div className="container max-w-4xl mx-auto py-8 px-4">
+    <div className="container max-w-4xl mx-auto py-16 px-4">
       <Profile />
-      <section className="mt-12">
-        <h2 className="text-3xl font-headline font-bold mb-8 text-center">
-          Latest Posts
+      <section className="mt-20">
+        <h2 className="text-2xl font-headline font-semibold mb-10 text-center text-muted-foreground">
+          Latest Writings
         </h2>
-        <div className="grid gap-8">
+        <div className="grid gap-12">
           {posts.map((post) => (
             <PostCard key={post.slug} post={post} />
           ))}

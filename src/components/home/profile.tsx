@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';
 
 export default function Profile() {
   return (
-    <section className="flex flex-col sm:flex-row items-center gap-8">
-      <Avatar className="h-32 w-32">
+    <section className="flex flex-col items-center gap-8 text-center">
+      <Avatar className="h-32 w-32 ring-4 ring-background ring-offset-4 ring-offset-background">
         <AvatarImage
           src="https://picsum.photos/128/128"
           alt="Vedang Vatsa"
@@ -15,13 +15,13 @@ export default function Profile() {
         />
         <AvatarFallback>VV</AvatarFallback>
       </Avatar>
-      <div className="text-center sm:text-left">
+      <div>
         <h1 className="text-4xl font-headline font-bold">Vedang Vatsa</h1>
-        <p className="mt-2 text-lg text-muted-foreground">
+        <p className="mt-4 max-w-xl text-lg text-muted-foreground mx-auto">
           Software Engineer & Digital Minimalist. Crafting clean, efficient, and
           user-centric web experiences.
         </p>
-        <div className="mt-4 flex justify-center sm:justify-start gap-2">
+        <div className="mt-6 flex justify-center gap-2">
           <Button variant="ghost" size="icon" asChild>
             <Link href="https://github.com" target="_blank" aria-label="GitHub">
               <Github className="h-5 w-5" />
