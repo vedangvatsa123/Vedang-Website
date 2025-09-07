@@ -88,7 +88,6 @@ export default function RootLayout({
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
-
       </head>
       <body
         className={cn(
