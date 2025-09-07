@@ -8,10 +8,7 @@ export default function Home() {
   return (
     <div className="container max-w-4xl mx-auto py-16 px-4">
       <Profile />
-      <section className="mt-20">
-        <h2 className="text-2xl font-headline font-semibold mb-10 text-center text-muted-foreground">
-          Latest Writings
-        </h2>
+      <section className="mt-16">
         <div className="grid gap-12">
           {posts.map((post) => (
             <PostCard key={post.slug} post={post} />
