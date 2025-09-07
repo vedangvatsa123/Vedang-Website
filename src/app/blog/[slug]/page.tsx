@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Tag, UserCircle } from 'lucide-react';
+import { Calendar, UserCircle } from 'lucide-react';
 
 type BlogPostPageProps = {
   params: {
