@@ -5,28 +5,29 @@ import Link from "next/link";
 
 const resumeData = {
     name: "Vedang Vatsa FRSA",
-    title: "100k Web3 Community | KPMG, EY, IIT-K alumnus | 22 publications",
+    title: "100k Web3 Community | KPMG, EY, IIT-K alumnus | 25 publications",
     location: "India",
     contact: {
         email: "vedangvats@gmail.com",
         linkedin: "www.linkedin.com/in/vedangvatsa",
         website: "vedangvats.com",
-        googleScholar: "scholar.google.co.in/citations"
+        googleScholar: "scholar.google.co.in/citations?user=...view_op=list_works"
     },
     summary: [
-        "Computer Engineer, MBA, Young Achiever 2020-21 and Young Researcher 2020 Awardee (22 publications)",
+        "Computer Engineer, MBA, Young Achiever 2020-21 and Young Researcher 2020 Awardee (25 publications)",
         "Earned recognition from a Nobel Laureate, head of MIT Media Lab, Screenwriter of Oscars, and the Former Director of Prime Minister's Office in India",
         "Among Top 50 Global Thought Leaders & Influencers on Metaverse 2022 & 2023 - by Thinkers360",
         "Fellow of the Royal Society for the Encouragement of Arts, Manufactures and Commerce",
         "Former Head, Entrepreneurship Cell (for ~6500 students) of Indian Institute of Technology Kanpur",
         "Represented Indian delegation in the India-Venezuela Youth Dialogue, India-Norway Youth Dialogue, India-China Dialogue, New India Youth Dialogue and World Business Dialogue in Germany",
-        "Issued Japan’s special visa for Intellectual Figures"
+        "Issued Japan’s special visa for Intellectual Figures",
+        "80 million Linkedin post views & 55 million views on Telegram channel"
     ],
     experience: [
         {
             company: "#Web3",
             role: "Founder",
-            period: "October 2022 - Present (3 years)",
+            period: "October 2022 - Present",
             details: [
                 "Built a global community of 100,000 web3 professionals and the largest telegram channel for Web3 jobs with 55 million yearly views.",
                 "Weekly Twitter space sessions (with guests like the Band Member of Pink Floyd, Partners of EY, Father of Digital Twin, CSO of Microsoft, etc.) were attended by 20-40k live listeners.",
@@ -38,7 +39,7 @@ const resumeData = {
         {
             company: "The RSA (The royal society for arts, manufactures and commerce)",
             role: "Fellow",
-            period: "October 2020 - Present (5 years)",
+            period: "October 2020 - Present",
             location: "London, England, United Kingdom",
             details: [
                 "FRSA is an award granted to individuals that the Royal Society of Arts (RSA) judges to have made outstanding achievements to social progress and development.",
@@ -83,10 +84,11 @@ const resumeData = {
     education: [
         {
             institution: "Indian Institute of Technology, Kanpur",
-            degree: ""
+            degree: "BE, Mtech, MBA"
         }
     ],
     skills: ["Community Management", "Online Marketing", "Project Management"],
+    languages: ["English (Professional Working)", "Hindi (Professional Working)"],
     certifications: [
         "Scrum Fundamentals Certified (SFC)",
         "Tableau Desktop Specialist",
@@ -102,11 +104,36 @@ const resumeData = {
         "Chartered Engineer [India]"
     ],
     publications: [
-        "Coronavirus Outbreak: Trillion-Dollar Crisis and Evolution of New Global Order",
-        "Emergence of TechFin in the emerging economies",
+        "A literature review on internet of things (iot)",
+        "Estonia’s e-governance and digital public service delivery solutions",
+        "Raspberry Pi based Implementation of Internet of Things using mobile messaging application-‘Telegram’",
+        "Growth of Digital Payments and the emergence of FinTech in India",
+        "Current Trends and Approaches of Network Intrusion Detection System",
+        "Base erosion and profit shifting in multinational corporations.",
+        "Blockchain Ecosystem Evolution",
+        "Stablecoins in the Modern Financial System",
+        "Stablecoin Growth and Market Dynamics",
+        "The Emerging Internet Of Value",
+        "Analysis of Global Research Proceedings in Artificial Intelligence",
+        "Computational Social Science in the Age of Big Data",
+        "Decoding identity in the Metaverse",
+        "A simulated reality with silicon consciousness",
+        "Navigating through a data-fluent ecosystem",
+        "Bias-free algorithm is essential for trustworthy Artificial Intelligence",
+        "Digital service delivery will bolster an Atmanirbhar Bharat",
         "Catalysing the National Infrastructure Pipeline: Project India",
-        "Security in Ubiquitous Computing- Location Based Applications",
-        "Current Trends and Approaches of Network Intrusion Detection System"
+        "Identification and Mitigation of Algorithmic Bias Through Policy Instruments",
+        "Emergence of TechFin in the emerging economies",
+        "Digital Lending: A $1 Trillion opportunity for India",
+        "Coronavirus Outbreak: Trillion-Dollar Crisis and Evolution of New Global Order",
+        "Leadership Effectiveness, Spiritual Values and the Paths to Happiness",
+        "A Case Study on ‘The Mobile Applications Industry’",
+        "A Review on the Multi Modal Biometric Systems",
+        "Comparative Analysis of Coverage Schemes in WSN (Wireless Sensor Network)",
+        "Emerging of New Service Oriented Approach Based on Internet of Things",
+        "Study and Analysis of security threats and attacks in MANET",
+        "Security in Ubiquitous Computing - Location Based Applications",
+        "Global Stablecoin Regulations and Policies",
     ]
 };
 
@@ -170,6 +197,7 @@ export default function ProfilePage() {
                     <Section title="Education">
                         <div>
                             <h3 className="text-lg font-semibold">{resumeData.education[0].institution}</h3>
+                            <p className="text-md text-muted-foreground">{resumeData.education[0].degree}</p>
                         </div>
                     </Section>
                     
@@ -180,18 +208,25 @@ export default function ProfilePage() {
                             </div>
                         </Section>
 
+                        <Section title="Languages">
+                            <ul className="list-disc list-inside space-y-1 text-foreground/90">
+                                {resumeData.languages.map(lang => <li key={lang}>{lang}</li>)}
+                            </ul>
+                        </Section>
+                    </div>
+                     <div className="grid md:grid-cols-2 gap-8">
                         <Section title="Certifications">
                             <ul className="list-disc list-inside space-y-1 text-foreground/90">
                                 {resumeData.certifications.map(cert => <li key={cert}>{cert}</li>)}
                             </ul>
                         </Section>
+                         <Section title="Honors & Awards">
+                            <ul className="list-disc list-inside space-y-1 text-foreground/90">
+                                {resumeData.honors.map(honor => <li key={honor}>{honor}</li>)}
+                            </ul>
+                        </Section>
                     </div>
 
-                     <Section title="Honors & Awards">
-                        <ul className="list-disc list-inside space-y-1 text-foreground/90">
-                            {resumeData.honors.map(honor => <li key={honor}>{honor}</li>)}
-                        </ul>
-                    </Section>
 
                     <Section title="Publications">
                         <ul className="list-disc list-inside space-y-1 text-foreground/90">
@@ -203,3 +238,5 @@ export default function ProfilePage() {
         </div>
     );
 }
+
+    
