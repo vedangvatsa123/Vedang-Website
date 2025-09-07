@@ -9,12 +9,11 @@ export default function Profile() {
     <section className="flex flex-col md:flex-row items-start gap-12 text-left">
       <div className="md:w-1/3 w-1/2 mx-auto md:mx-0 flex-shrink-0">
         <Image
-          src="https://picsum.photos/400/400"
+          src="https://i.imgur.com/KwoA438.jpeg"
           alt="Vedang Vatsa"
           width={400}
           height={400}
           className="rounded-full object-cover"
-          data-ai-hint="man portrait"
         />
       </div>
       <div className="flex-grow">
