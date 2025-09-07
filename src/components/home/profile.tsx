@@ -12,9 +12,9 @@ export default function Profile() {
         <Image
           src={VedangVatsaPhoto}
           alt="Vedang Vatsa"
-          width={400}
-          height={400}
-          className="rounded-full object-cover"
+          width={96}
+          height={96}
+          className="rounded-full object-cover mx-auto"
           priority
         />
       </div>
