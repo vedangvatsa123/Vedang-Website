@@ -7,8 +7,8 @@ import VedangVatsaPhoto from '@/images/Vedang Vatsa photo.jpeg';
 
 export default function Profile() {
   return (
-    <section className="flex flex-col md:flex-row items-start gap-12 text-left">
-      <div className="md:w-[80px] w-1/4 mx-auto md:mx-0 flex-shrink-0">
+    <section className="flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+      <div className="w-24 flex-shrink-0">
         <Image
           src={VedangVatsaPhoto}
           alt="Vedang Vatsa"
@@ -19,7 +19,7 @@ export default function Profile() {
         />
       </div>
       <div className="flex-grow">
-        <div className="flex flex-col items-start gap-2">
+        <div className="flex flex-col items-center md:items-start gap-2">
           <h1 className="text-4xl font-headline font-bold">Vedang Vatsa</h1>
           <p className="text-xl text-muted-foreground">
             Exploring the intersection of technology, community, and the future of the web.
@@ -28,7 +28,7 @@ export default function Profile() {
         <p className="max-w-3xl text-lg text-foreground/90 mt-4">
           Founder of Hashtag Web3, a community of over 100,000 AI & Web3 professionals. Featured in Thinkers360’s Top 50 Metaverse Thought Leaders and a Fellow of the Royal Society of Arts.
         </p>
-        <div className="flex flex-wrap gap-4 items-center mt-8">
+        <div className="flex flex-wrap gap-4 items-center mt-8 justify-center md:justify-start">
           <Button asChild>
             <Link href="/profile">
               View Full Profile
