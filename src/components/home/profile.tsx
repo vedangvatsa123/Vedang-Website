@@ -8,7 +8,7 @@ import VedangVatsaPhoto from '@/images/Vedang Vatsa photo.jpeg';
 export default function Profile() {
   return (
     <section className="flex flex-col md:flex-row items-start gap-12 text-left">
-      <div className="md:w-1/3 w-1/2 mx-auto md:mx-0 flex-shrink-0">
+      <div className="md:w-1/4 w-1/3 mx-auto md:mx-0 flex-shrink-0">
         <Image
           src={VedangVatsaPhoto}
           alt="Vedang Vatsa"
