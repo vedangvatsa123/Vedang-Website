@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAllPosts, getPostBySlug } from '@/lib/posts';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, UserCircle } from 'lucide-react';
+import { UserCircle } from 'lucide-react';
 
 type BlogPostPageProps = {
   params: {
@@ -34,16 +34,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="flex items-center gap-2">
             <UserCircle className="h-4 w-4" />
             <span>Vedang Vatsa</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Calendar className="h-4 w-4" />
-            <time dateTime={post.date}>
-              {new Date(post.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </time>
           </div>
         </div>
       </header>
