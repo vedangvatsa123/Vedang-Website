@@ -3,17 +3,19 @@ import { Github, Linkedin, Twitter, Mail, Send } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import VedangVatsaPhoto from '@/images/Vedang Vatsa photo.jpeg';
 
 export default function Profile() {
   return (
     <section className="flex flex-col md:flex-row items-start gap-12 text-left">
       <div className="md:w-1/3 w-1/2 mx-auto md:mx-0 flex-shrink-0">
         <Image
-          src="https://i.imgur.com/KwoA438.jpeg"
+          src={VedangVatsaPhoto}
           alt="Vedang Vatsa"
           width={400}
           height={400}
           className="rounded-full object-cover"
+          priority
         />
       </div>
       <div className="flex-grow">
