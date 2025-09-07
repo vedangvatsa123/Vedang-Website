@@ -51,17 +51,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="prose dark:prose-invert max-w-none text-lg">
         <p>{post.content}</p>
       </div>
-
-      <footer className="mt-12">
-        <div className="flex items-center gap-4 flex-wrap">
-          <Tag className="h-5 w-5 text-muted-foreground" />
-          {post.tags.map((tag) => (
-            <Badge key={tag} variant="outline" asChild>
-              <Link href={`/tags/${tag}`}>{tag}</Link>
-            </Badge>
-          ))}
-        </div>
-      </footer>
     </article>
   );
 }
