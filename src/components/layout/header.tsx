@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/', label: 'Writings' },
+  { href: '/profile', label: 'Profile' },
   { href: '/tags', label: 'Tags' },
 ];
 
@@ -27,7 +28,7 @@ export default function Header() {
               href={href}
               className={cn(
                 'transition-colors hover:text-foreground/80',
-                (pathname === href || (href === '/writings' && pathname.startsWith('/blog'))) ? 'text-foreground' : 'text-foreground/60'
+                (pathname === href || (href === '/' && pathname.startsWith('/blog'))) ? 'text-foreground' : 'text-foreground/60'
               )}
             >
               {label}
