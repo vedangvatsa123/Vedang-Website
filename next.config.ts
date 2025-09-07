@@ -1,8 +1,10 @@
 import type {NextConfig} from 'next';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/Vedang-Website',
+  assetPrefix: isProd ? '/Vedang-Website/' : '',
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -26,7 +28,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  trailingSlash: true,
 };
 
 export default nextConfig;
