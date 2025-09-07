@@ -5,9 +5,48 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import './globals.css';
 
+const siteConfig = {
+  name: 'veda.ng - Vedang Vatsa',
+  description: "Vedang Vatsa's personal blog and profile, exploring the intersection of technology, community, and the future of the web.",
+  url: 'https://vedangvatsa123.github.io',
+  ogImage: 'https://i.imgur.com/KwoA438.jpeg',
+};
+
 export const metadata: Metadata = {
-  title: 'veda.ng - Vedang Vatsa',
-  description: "Vedang Vatsa's personal blog and profile.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  authors: [{ name: 'Vedang Vatsa', url: siteConfig.url }],
+  creator: 'Vedang Vatsa',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+    creator: '@VedangVatsa',
+  },
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
